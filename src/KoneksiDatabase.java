@@ -39,8 +39,7 @@ public class KoneksiDatabase {
             ps.setString(3, pengarang);
             ps.setString(4, penerbit);
             ps.executeUpdate();
-        } catch (SQLException ex) {
-        }
+        } catch (SQLException ex) {}
     }
 
     // Ubah data
@@ -52,8 +51,7 @@ public class KoneksiDatabase {
             ps.setString(2, pengarang);
             ps.setString(3, penerbit);
             ps.executeUpdate();
-        } catch (SQLException ex) {
-        }
+        } catch (SQLException ex) {}
     }
 
     // Hapus data
@@ -62,7 +60,6 @@ public class KoneksiDatabase {
         try (PreparedStatement ps = conn.prepareStatement(query)) {
             ps.setString(1, kode_buku);
             ps.executeUpdate();
-        } catch (SQLException ex) {
-        }
+        } catch (SQLException ex) {}
     }
 }
