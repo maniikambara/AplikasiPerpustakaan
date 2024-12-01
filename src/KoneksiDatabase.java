@@ -47,10 +47,10 @@ public class KoneksiDatabase {
     public void ubahBuku(String kode_buku, String judul_buku, String pengarang, String penerbit) {
         String query = "UPDATE buku SET judul_buku = ?, pengarang = ?, penerbit = ? WHERE kode_buku = ?";
         try (PreparedStatement ps = conn.prepareStatement(query)) {
-            ps.setString(1, kode_buku);
-            ps.setString(2, judul_buku);
-            ps.setString(3, pengarang);
-            ps.setString(4, penerbit);
+            ps.setString(4, kode_buku);
+            ps.setString(1, judul_buku);
+            ps.setString(2, pengarang);
+            ps.setString(3, penerbit);
             ps.executeUpdate();
         } catch (SQLException ex) {
         }
